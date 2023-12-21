@@ -1,0 +1,92 @@
+.footer {
+    @include bg-black($bg-section);
+    // padding: 50px 120px 28px 120px;
+
+    &__top {
+        @include flexible(space-between);
+        padding: 50px 120px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+        &-btn {
+            @include btnRed(160px, 16px, 24px, 40px);
+            @include circleRegular();
+            padding: 8px 0 8px;
+        }
+    }
+
+    &__social{
+        p {
+            margin-right: 18px;
+            @include circleRegular();
+            font-size: 18px;
+            line-height: 27px;
+            color: $color-light;
+        }
+
+        &-block {
+            @include flexible(center);
+    
+            a:not(:last-of-type) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__phone {
+        @include CircleBold();
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $color-light;
+        margin-right: 30px;
+    }
+
+    &__bottom {
+        padding: 25px 120px;
+        @include flexible(space-between);
+        @include circleRegular();
+        font-size: 11px;
+        line-height: 17px;
+        color: $color-footer;
+
+        &-list {
+            display: flex;
+
+            li:not(:last-child){
+                margin-right: 100px;
+            }
+
+            a{
+                color: $color-light;
+            }
+        }
+
+        &-payment {
+            display: flex;
+            align-items: center;
+
+            p{
+                color: $color-light;
+            }
+
+            &-block{
+                margin-left: 14px;
+                display: flex;
+                align-items: center;
+
+                img:not(:last-child){
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-develop {
+            display: flex;
+            align-items: center;
+
+            p:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+}

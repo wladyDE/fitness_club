@@ -1,0 +1,225 @@
+
+@media(max-width:1700px) {
+    .header__top-wrapper {
+        padding: 27px 10px 26px;
+    }
+}
+
+
+@media(max-width:1367px) {
+    .header {
+        &__top-wrapper {
+            padding: 27px 20px 26px;
+        }
+
+        .nav {
+            padding: 30px 20px 89px;
+
+            &-wrapper {
+                justify-content: space-around;
+            }
+
+            & .menu__footer-link {
+                :not(:last-child) {
+                    margin-right: 50px;
+                }
+            }
+
+            .menu__footer {
+                margin: 30px 0 30px;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+
+    .nav {
+        .header__slider-social-title {
+            margin-right: 0;
+        }
+
+        .menu__footer-social {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 200px;
+        }
+
+        .menu__footer-pay {
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media(max-width:980px) {
+    .header {
+        &__slider-block {
+            padding: 130px 0 30px 50px;
+            background-size: contain;
+        }
+
+        &__slider-form {
+            margin-bottom: 40px;
+        }
+
+        &__slider-social {
+            justify-content: flex-start;
+            max-width: 100%;
+        }
+
+        .nav {
+            .menu__footer-link {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu__footer-link :not(:last-child) {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .header {
+        &__top-logo {
+            display: inline-block;
+            font-size: 25px;
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &__slider-block {
+            padding: 130px 0 30px 30px;
+        }
+
+        &__top-contact {
+            justify-content: space-between;
+            width: 55%;
+        }
+
+        &__top-btn {
+            display: none;
+        }
+
+        &__slider-title {
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        &__slider-text {
+            width: 90%;
+            text-align: center;
+            margin: 7px auto 45px;
+        }
+
+        &__slider-form {
+            margin: 0 auto 40px;
+        }
+
+        &__slider-form-block {
+            flex-direction: column;
+        }
+
+        &__slider-input {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__slider-social {
+            justify-content: center;
+        }
+
+        &__slider .slick-dots {
+            top: 35%;
+            right: 2%;
+        }
+
+        &__slider .slick-dots li,
+        &__slider .slick-dots li.slick-active,
+        &__slider .slick-dots li button {
+            height: 50px;
+        }
+        .nav{
+            .menu__footer {
+                flex-direction: column;
+            }
+
+            .menu__footer-link {
+                margin: 20px 0;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 590px){
+    .header{
+        &__slider-block {
+            padding: 130px 10px 30px 10px;
+        }
+
+        &__slider-title {
+            width: 80%;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__slider-social {
+            flex-direction: column;
+        }
+
+        &__slider-social-title {
+            margin-right: 0;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .header{
+        &__top-logo {
+            font-size: 20px;
+        }
+
+        &__top-phone {
+            display: none;
+        }
+
+        &__top-contact {
+            justify-content: flex-end;
+        }
+
+        &__slider-title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        &__slider-text {
+            line-height: 22px;
+        }
+
+        .nav{
+            .nav__menu-right .nav__menu-list-adress {
+                width: 100%;
+            }
+
+            .menu__footer-pay-icon {
+                flex-wrap: nowrap;
+                display: flex;
+            }
+        }
+    }
+}

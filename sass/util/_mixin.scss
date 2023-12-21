@@ -1,0 +1,38 @@
+@mixin flexible($jc){
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+}
+
+@mixin RussoOne(){
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
+}
+
+@mixin CircleBold(){
+    font-family: 'Circe bold';
+    font-weight: 700;
+}
+
+@mixin circleRegular(){
+    font-family: 'Circe regular';
+    font-weight: 400;
+}
+
+@mixin btnRed($w, $fz, $lh, $br) {
+    background: $color-red;
+    width: $w;
+    font-size: $fz;
+    line-height: $lh;
+    border-radius: $br;
+    color: $color-light;
+    -webkit-border-radius: $br;
+    -moz-border-radius: $br;
+    -ms-border-radius: $br;
+    -o-border-radius: $br;
+    text-align: center;
+}
+
+@mixin bg-black($bg){
+    background: $bg;
+}

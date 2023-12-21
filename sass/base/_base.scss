@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-size: inherit;
+    color: $color-black;
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+body{
+    @include bg-black($bg-black-lt);
+}
+
+.container {
+    max-width: 1115px;
+    margin: 0 auto;
+}
+
+.title-inner {
+    @include RussoOne();
+    font-size: 200px;
+    line-height: 241px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-title;
+    position: relative;
+    text-shadow: 0px 0px 20px $color-text-shadow,
+        0px 0px 20px $color-text-shadow,
+        0px 0px 20px $color-text-shadow,
+        0px 0px 20px $color-text-shadow;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 254px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(200, 10, 44, 1) 0%, rgba(29, 28, 33, 1) 100%);
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
+
+.subtitle-inner {
+    position: absolute;
+    z-index: 2;
+    filter: none;
+    -webkit-filter: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    max-width: 516px;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: $color-white;
+}
+
+.overlay{
+    overflow-y: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}

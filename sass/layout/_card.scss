@@ -1,0 +1,106 @@
+.card {
+    background: $bg-section, url(../img/card-bg.jpg) no-repeat center;
+    padding-top: 33px;
+    padding-bottom: 145px;
+
+    &__title {
+        &::after {
+            left: 55%;
+            bottom: 35%;
+        }
+    }
+
+    &__wrapper {
+        @include flexible(space-between);
+        align-items: inherit;
+        flex-wrap: wrap;
+        margin-top: 23px;
+    }
+
+    &__block {
+        width: 255px;
+        background: $color-white;
+        position: relative;
+        padding: 45px 30px 54px 30px;
+
+        &-top {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -37px;
+        }
+
+        &-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-subtitle {
+            @include circleRegular();
+            font-size: 11px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: $color-red;
+        }
+
+        &-title {
+            @include CircleBold();
+            font-size: 24px;
+            line-height: 35px;
+            color: $color-title;
+            margin-bottom: 15px;
+        }
+
+        & li {
+            @include circleRegular();
+            font-size: 14px;
+            line-height: 28px;
+            color: $color-title;
+            padding-left: 13px;
+            position: relative;
+
+            &::before {
+                content: "+";
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 14px;
+                color: $color-red;
+            }
+        }
+
+        &-btn {
+            @include circleRegular();
+            border: 1px solid $color-red;
+            border-radius: 40px;
+            width: 195px;
+            text-align: center;
+            padding: 8px 0;
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-red;
+        }
+
+        &-bottom {
+            @include CircleBold();
+            background: $color-red;
+            width: 195px;
+            position: absolute;
+            bottom: -25px;
+            text-align: center;
+            padding: 10px 0 5px;
+            font-size: 24px;
+            line-height: 35px;
+            color: $color-white;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+        }
+    }
+}

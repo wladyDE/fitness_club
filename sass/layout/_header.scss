@@ -1,0 +1,284 @@
+.header {
+    position: relative;
+
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &-wrapper {
+            max-width: 1680px;
+            margin: 0 auto;
+            @include flexible(space-between);
+            padding: 27px 0 26px;
+            position: relative;
+        }
+
+        &-logo {
+            @include RussoOne();
+            font-size: 30px;
+            line-height: 36px;
+            color: $color-white;
+            position: relative;
+
+            sup {
+                top: 0;
+                font-size: inherit;
+                color: $color-red;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 179px;
+                height: 5px;
+                bottom: -27px;
+                left: 0;
+                background: $color-redline;
+            }
+        }
+
+        &-contact {
+            @include flexible(center);
+        }
+
+        &-phone {
+            @include CircleBold();
+            color: $color-light;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &-btn {
+            @include btnRed(160px, 16px, 24px, 50px);
+            padding: 8px 0;
+            margin: 0 62px 0 30px;
+        }
+    }
+
+    &__top-fixed {
+        position: fixed;
+        // background: radial-gradient(50% 50% at 50% 50%, rgb(29 28 33), #1D1C21 100%);
+        background: radial-gradient(50% 50% at 50% 50%, #1d1c21 0%, #1D1C21 100%);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    &__slider {
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+
+        &-form {
+            margin-bottom: 282px;
+            max-width: 457px;
+
+            &-block {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+        }
+
+        &-input {
+            width: 220px;
+            padding: 10px 20px;
+            border: 1px solid $border-color-opacity;
+
+            ::placeholder {
+                @include circleRegular();
+                font-size: 15px;
+                line-height: 24px;
+                color: $color-light;
+            }
+        }
+
+        &-form-btn {
+            @include btnRed(100%, 20px, 29px, 50px);
+            color: $color-light;
+            padding: 10px 0 11px;
+        }
+
+        &-social {
+            @include flexible(space-between);
+            max-width: 401px;
+
+            &-title {
+                @include circleRegular();
+                font-size: 18px;
+                line-height: 27px;
+                color: $color-light;
+                margin-right: 18px;
+            }
+
+            &-link:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &-block {
+                display: flex;
+            }
+        }
+
+        &-btn {
+            width: 42px;
+            height: 12px;
+            background: url(../img/arrow-prev.svg) no-repeat center;
+            position: absolute;
+            z-index: 2;
+            bottom: 30%;
+            left: 10%;
+            cursor: pointer;
+        }
+
+        &-next {
+            left: 18%;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+
+        &-next.active {
+            background: url(../img/arrow-next.svg) no-repeat center;
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+        }
+
+        &-prev.active {
+            background: url(../img/arrow-next.svg) no-repeat center;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+
+        & .slick-dots {
+            position: absolute;
+            right: 6%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            & li{
+                width: 5px;
+                height: 125px;
+                @include flexible(center);
+
+                & button {
+                    font-size: 0;
+                    line-height: 0;
+                    width: 2.5px;
+                    height: 125px;
+                    background: $border-color-opacity;
+                    border: none;
+                    outline: none;
+                    display: block;
+                }
+            }
+
+            & li.slick-active {
+                width: 5px;
+
+                & button{
+                    width: 5px;
+                    background: $color-red;
+                }
+            }
+        }
+    }
+
+    &__slider-block {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(29, 28, 33, 0.85) 0%, #1D1C21 100%), url(../img/slider-bg.jpg);
+        background-size: cover;
+        padding: 263px 0 89px 120px;
+    }
+
+    &__slider-title {
+        font-size: 70px;
+        line-height: 84px;
+        text-transform: uppercase;
+        color: $color-white;
+        width: 530px;
+        @include RussoOne();
+    }
+
+    &__slider-text {
+        font-size: 18px;
+        line-height: 27px;
+        color: $color-light;
+        width: 540px;
+        margin: 7px 0 45px;
+        @include circleRegular();
+    }
+}
+
+.mobile-menu {
+    width: 33px;
+    height: 29px;
+    position: relative;
+    cursor: pointer;
+
+    &__line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: $color-white;
+        height: 3px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+
+        &:last-child {
+            bottom: 0;
+        }
+
+        &:last-child.active,
+        &:first-child.active {
+            opacity: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+        }
+
+        &:nth-child(2).active {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+
+        &:nth-child(3).active {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+        }
+    }
+}

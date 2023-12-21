@@ -1,0 +1,124 @@
+@media(max-width:1550px) {
+    .gallery {
+        & &__title {
+            font-size: 130px;
+        }
+
+        &__subtitle {
+            top: 50%;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .gallery {
+        & &__title{
+            font-size: 100px;
+        }
+
+        &__title::after {
+            left: 55%;
+        }
+
+        & &__subtitle {
+            line-height: 30px;
+            width: 316px;
+            left: 53%;
+            text-align: center;
+        }
+
+        &__wrapper {
+            padding: 0 10px;
+        }
+    }
+}
+
+@media(max-width:980px) {
+    .gallery {
+        padding-bottom: 60px;
+        margin-bottom: 0;
+
+        & &__title{
+            font-size: 80px;
+        }
+
+        & &__subtitle {
+            width: 250px;
+            text-align: center;
+            left: 50%;
+        }
+
+        &__title::after {
+            left: 55%;
+        }
+
+        &__slider-block-inner {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__slider-text {
+            width: 100%;
+            margin-left: 0px;
+            padding: 0 5px;
+        }
+
+        &__slider-prev {
+            display: none;
+        }
+
+        &__sliders .header__slider-prev {
+            left: 10%;
+            bottom: -20px;
+            right: auto;
+        }
+
+        &__sliders .header__slider-prev.active {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+
+        &__sliders .header__slider-btn {
+            right: 10%;
+            bottom: -20px;
+        }
+    }
+}
+
+
+@media(max-width:768px) {
+    .gallery {
+        & &__title{
+            font-size: 60px;
+        }
+
+        & &__subtitle {
+            width: 100%;
+            line-height: 20px;
+        }
+
+        &__slider-img {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:590px) {
+    .gallery {
+        & &__title{
+            font-size: 0px;
+        }
+
+        & &__subtitle {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        &__title::after {
+            bottom: 15%;
+        }
+    }
+}

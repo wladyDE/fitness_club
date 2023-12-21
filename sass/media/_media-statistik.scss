@@ -1,0 +1,52 @@
+@media(max-width:1200px) {
+    .statistik {
+        &__subtitle {
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+        &__title::after {
+            left: 55%;
+        }
+
+        &__wrapper {
+            padding: 0 10px;
+        }
+
+        &__block {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media(max-width:590px) {
+    .statistik {
+        &__subtitle {
+            text-align: center;
+        }
+
+        &__title::after {
+            bottom: 20%;
+        }
+
+        &__block {
+            width: 51%;
+            margin: 0 auto 20px;
+        }
+    }
+}
+
+@media(max-width:450px) {
+    .statistik {
+        &__subtitle {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+

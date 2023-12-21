@@ -1,0 +1,203 @@
+.benefits {
+    background: $bg-section, url(../img/benefits-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 60px 0 270px 0;
+    position: relative;
+
+    .title-inner::after {
+        bottom: 30%;
+        left: 50%;
+        background: linear-gradient(90deg, rgb(32, 30, 45), rgb(200, 10, 44) 50%, rgb(32, 30, 45));
+    }
+
+    &__wrapper {
+        @include flexible(space-between);
+        flex-wrap: wrap;
+
+        &-room {
+            width: 350px;
+            height: 202px;
+            padding: 40px 38px 40px 40px;
+            color: $color-white;
+            position: relative;
+            margin-bottom: 30px;
+
+            &::before {
+                content: "";
+                width: 272px;
+                height: 5px;
+                background: $color-red;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+
+            &__hash-nubmer {
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                top: 0;
+                background: #ffffff1a;
+                width: 40px;
+                height: 40px;
+                @include flexible(center);
+            }
+
+            &__title {
+                @include CircleBold();
+                font-size: 24px;
+                line-height: 30px;
+                color: $color-light;
+                margin-bottom: 15px;
+            }
+
+            &__title span {
+                color: $color-red;
+            }
+
+            &__text {
+                @include circleRegular();
+                font-size: 15px;
+                line-height: 24px;
+                color: $color-light;
+            }
+        }
+
+        &-room:first-child {
+            background: $bg-benefits-block, url(../img/benefits-1.jpg) no-repeat center;
+        }
+
+        &-room:nth-child(2) {
+            background: $bg-benefits-block, url(../img/benefits-2.jpg) no-repeat center;
+        }
+
+        &-room:nth-child(3) {
+            background: $bg-benefits-block, url(../img/benefits-3.jpg) no-repeat center;
+        }
+
+        &-room:nth-child(4) {
+            background: $bg-benefits-block, url(../img/benefits-4.jpg) no-repeat center;
+        }
+
+        &-room:nth-child(5) {
+            background: $bg-benefits-block, url(../img/benefits-5.jpg) no-repeat center;
+        }
+
+        &-room:last-child {
+            background: $bg-benefits-block, url(../img/benefits-6.jpg) no-repeat center;
+        }
+    }
+
+    &__bottom {
+        @include flexible(flex-end);
+        margin-top: 30px;
+        background-image: url(../img/benefits-bottom.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        border: 5px solid $color-red;
+        padding: 50px 65px 50px 0;
+
+        &-title {
+            @include CircleBold();
+            font-size: 24px;
+            line-height: 35px;
+            color: $color-light;
+            margin-right: 63px;
+
+            & span{
+                color: $color-red;
+            }
+        }
+
+        &-btn{
+            @include btnRed(160px, 16px, 24px, 50px); 
+            padding: 8px 0;
+            
+        }
+    }
+
+    &__link{
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
+        animation: keyDown 3s ease-in-out infinite;
+        -webkit-animation: keyDown 3s ease-in-out infinite;
+
+            & span {
+            height: 15px;
+            width: 15px;
+            display: block;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+            margin: -5px auto;
+            animation: arrow-down 2s infinite;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -webkit-animation: arrow-down 2s infinite;
+        }
+
+        & span:nth-child(2){
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        & span:nth-child(3){
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-right: 2px solid rgba(255, 255, 255, 0.3);
+            animation-delay: -0.2s;
+        }
+
+        & span:last-child{
+            border-bottom: 2px solid rgba(255, 255, 255, 1);
+            border-right: 2px solid rgba(255, 255, 255, 1);
+            animation-delay: -0.4s;
+        }
+    }
+
+    @keyframes keyDown {
+        0%{
+            bottom: 120px;
+        }
+        50%{
+            bottom: 110px;
+        }
+        100%{
+            bottom: 120px;
+        }
+    }
+
+    @keyframes arrow-down{
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-10px, -10px);
+            -webkit-transform: rotate(45deg) translate(-10px, -10px);
+            -moz-transform: rotate(45deg) translate(-10px, -10px);
+            -ms-transform: rotate(45deg) translate(-10px, -10px);
+            -o-transform: rotate(45deg) translate(-10px, -10px);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg) translate(10px, 10px);
+            -webkit-transform: rotate(45deg) translate(10px, 10px);
+            -moz-transform: rotate(45deg) translate(10px, 10px);
+            -ms-transform: rotate(45deg) translate(10px, 10px);
+            -o-transform: rotate(45deg) translate(10px, 10px);
+        }
+    }
+}

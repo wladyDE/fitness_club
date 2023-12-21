@@ -1,0 +1,118 @@
+.adress {
+    padding: 33px 0 0 0;
+    @include bg-black($bg-section);
+
+    &-container{
+        position: relative;
+        padding-bottom: 149px;
+    }
+
+    &__title {
+        font-size: 180px;
+        
+        &::after {
+            left: 20%;
+            top: 61%;
+        }
+    }
+
+    &__subtitle {
+        left: 25%;
+    }
+
+    &__top {
+        @include flexible(space-between);
+        align-items: inherit;
+
+        &-block {
+            width: 303px;
+            color: $color-light;
+
+            &:last-child .adress__top-text {
+                width: 255px;
+            }
+        }
+
+        &-title {
+            @include CircleBold();
+            font-size: 20px;
+            line-height: 29px;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            @include circleRegular();
+            font-size: 15px;
+            line-height: 23px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 730px;
+        padding: 40px 43px 43px 40px;
+        background: $bg-black-primary;
+        box-shadow: 0px 7px 40px rgba(200, 10, 44, 0.6);
+        color: $color-light;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        bottom: -83px;
+
+        &-contact {
+            @include flexible(space-between);
+            align-items: inherit;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -43px;
+                left: 0;
+                right: 0;
+                background: $color-red;
+                height: 3px;
+
+            }
+        }
+
+        &-left {
+            a {
+                @include CircleBold();
+                font-size: 24px;
+                line-height: 35px;
+                text-transform: uppercase;
+                color: $color-light;
+            }
+
+            button {
+                @include circleRegular();
+                @include btnRed(160px, 16px, 24px, 40px);
+                color: $color-light;
+                padding: 8px 0 8px;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+
+        &-right {
+            a {
+                @include CircleBold();
+                font-size: 24px;
+                line-height: 35px;
+                color: $color-light;
+            }
+
+            p {
+               @include circleRegular();
+                font-size: 15px;
+                line-height: 23px;
+                color: $color-light;
+                margin-top: 18px;
+            }
+        }
+    }
+}

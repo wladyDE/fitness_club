@@ -1,0 +1,11 @@
+.btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-red{
+    color: $color-white;
+    background: $color-red;
+}
